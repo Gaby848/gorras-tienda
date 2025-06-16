@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gorras Más Vendidas</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Fondo animado oscuro con gradiente dinámico */
+    body {
+      background: radial-gradient(circle at center, #efe9e9, #e4dcdc);
+      color: #ece3e3;
+      animation: backgroundShift 10s infinite alternate;
+    }
+ header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(45deg, #8e8a2a, #ff6f61, #3498db);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+    h1{
+      color: #e6e4e0;
+      
+      &:hover{
+        color: #d0b641fa;
+       }
+    }
+   
+   p{
+
+  animation: aparecerTitulo 2s ease-out;
+  text-shadow: 0 0 8px #ffc107aa , 0 0 16px #ffc107aa;
+  color: #ffc107;
+    }
+
+    @keyframes backgroundShift {
+      0% {
+        background: radial-gradient(circle at 30% 30%,  #1c1c1c, #0d0d0d);
+      }
+      50% {
+        background: radial-gradient(circle at 70% 50%, #1c1c1c, #000000);
+      }
+      100% {
+        background: radial-gradient(circle at 40% 70%, #202020, #111111);
+      }
+    }
+
+    .card {
+      background-color: #0f0909;
+      border: none;
+      box-shadow: 0 0 10px rgba(243, 238, 238, 0.4);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card-title {
+      color: #ffc107;
+    }
+
+    footer {
+      border-top: 1px solid #e5e1e1;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">pagina principal</a>
+
+  <header class="text-white text-center py-4">
+    <h1>Top 5 Gorras Más Vendidas del Mercado</h1>
+    <p class="lead">Estilo urbano, calidad y tendencia</p>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4">
+
+      <!-- Gorra 1 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./img/negro.jpg" class="card-img-top" alt="Gorra 1">
+          <div class="card-body">
+            <h5 class="card-title">Gorra Clásica Negra</h5>
+            <p class="card-text text-white">Un modelo atemporal que combina con todo. Calidad premium y ajuste perfecto.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gorra 2 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./img/retro.jpg" class="card-img-top" alt="Gorra 2">
+          <div class="card-body">
+            <h5 class="card-title">Gorra Trucker Retro</h5>
+            <p class="card-text text-white">Estilo vintage con malla trasera. Ideal para días soleados y looks relajados.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gorra 3 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./img/snapback.jpg" class="card-img-top" alt="Gorra 3">
+          <div class="card-body">
+            <h5 class="card-title">Snapback Urbana</h5>
+            <p class="card-text text-white">Diseño moderno con visera plana. Perfecta para destacar en la ciudad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gorra 4 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./img/bordada.jpg" class="card-img-top" alt="Gorra 4">
+          <div class="card-body">
+            <h5 class="card-title">Gorra Bordada</h5>
+            <p class="card-text text-white">Detalles bordados a mano y materiales sostenibles. Combina diseño y conciencia ecológica.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gorra 5 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./img/deportiva negra.jpg" class="card-img-top" alt="Gorra 5">
+          <div class="card-body">
+            <h5 class="card-title">Gorra Deportiva</h5>
+            <p class="card-text text-white">Ligera y transpirable, ideal para actividades al aire libre y entrenamientos urbanos.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="text-white text-center py-3">
+    <p class="mb-0">© 2025 Gorras Urbanas. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+@charset "UTF-8";
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a09;
+  color: #111;
+}
+
+a {
+  transition: color 1s ease;
+}
+
+header {
+  background-color: #111;
+  color: rgba(255, 255, 255, 0.989);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header .logo img {
+  height: 50px;
+}
+header .logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.6666666667), 0 0 16px rgba(255, 193, 7, 0.6666666667);
+  color: #ffc107;
+  animation: aparecerTitulo 2s ease-out;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: #e2f20a;
+}
+
+@keyframes aparecerTitulo {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+.productos h3 {
+  text-align: center;
+  color: white;
+}
+.productos h3:hover {
+  color: #e2f20a;
+}
+.productos .producto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.productos .producto {
+  background: rgb(129, 133, 31);
+  border: 1px solid #a3a303;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.productos .producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.productos .producto img {
+  width: 100%;
+  height: auto;
+}
+.productos .producto h4 {
+  margin: 0.5rem 0;
+}
+
+.btn-comprar {
+  background-color: #0a0a09;
+  color: #ffc107;
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.6666666667), 0 0 16px rgba(255, 193, 7, 0.6666666667);
+}
+
+footer {
+  text-align: left;
+  padding: 1rem;
+  background-color: #111;
+  color: #e2f20a;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .productos {
+    flex-direction: column;
+  }
+  .productos .producto {
+    width: 90%;
+  }
+}
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a09;
+  color: #111;
+}
+
+header {
+  background-color: #111;
+  color: rgb(237, 233, 233);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header .logo img {
+  height: 50px;
+}
+header .logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+header h1 {
+  margin: 0;
+  animation: aparecerTitulo 2s ease-out;
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.6666666667), 0 0 16px rgba(255, 193, 7, 0.6666666667);
+  color: #ffc107;
+}
+@keyframes aparecerTitulo {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+header nav ul li a {
+  color: rgb(244, 226, 226);
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: #e2f20a;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(45deg, #8e8a2a, #ff6f61, #3498db);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+}
+.hero h2 {
+  margin-bottom: 0.5rem;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.sub-titulo {
+  margin: 0;
+  animation: aparecerTitulo 2s ease-out;
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.6666666667), 0 0 16px rgba(255, 193, 7, 0.6666666667);
+  color: #ffc107;
+}
+
+.productos {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+.productos h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(244, 226, 226);
+  text-decoration: none;
+  font-weight: bold;
+}
+.productos h3:hover {
+  color: #e2f20a;
+}
+.productos .producto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.productos .producto {
+  background: rgba(231, 234, 145, 0.679);
+  padding: 1rem;
+  border: 1px solid #f7f7f0;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.productos .producto img {
+  width: 100%;
+  height: auto;
+}
+.productos .producto h4 {
+  margin: 0.5rem 0;
+}
+
+.btn-comprar {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0a0a09;
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.6666666667), 0 0 16px rgba(255, 193, 7, 0.6666666667);
+  color: #ffc107;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgb(0, 0, 0.2);
+  transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.btn-comprar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  text-align: end left;
+  padding: 1rem;
+  background-color: #111;
+  color: #e2f20a;
+}
+
+/* 🔁 Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .productos {
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productos h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .productos .producto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .producto {
+    width: 90%;
+  }
+}
+/* ✨ Animaciones */
+a {
+  transition: color 1s ease;
+}
+
+.producto {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*# sourceMappingURL=estilos.css.map */

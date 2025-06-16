@@ -1,0 +1,21 @@
+// scss/_media.scss
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .productos {
+    flex-direction: column;
+
+    .producto {
+      width: 90%;
+    }
+  }
+}

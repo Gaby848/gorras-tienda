@@ -1,0 +1,236 @@
+
+// scss/estilos.scss
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'header';
+@import 'productos';
+@import 'footer';
+@import 'media';
+
+
+// Variables
+$color-principal: #111;
+$color-secundario: #e2f20a;
+$color-fondo: #0a0a09;
+$fuente: 'Arial', sans-serif;
+
+body {
+  font-family: $fuente;
+  margin: 0;
+  padding: 0;
+  background-color: $color-fondo;
+  color: $color-principal;
+}
+
+header {
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  img{
+    height: 50px;
+  }
+  h1{
+    margin: 0;
+    font-size: 1.8rem;
+  }
+}
+
+
+  background-color: $color-principal;
+  color: rgb(237, 233, 233);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+  animation: aparecerTitulo 2s ease-out;
+  text-shadow: 0 0 8px #ffc107aa , 0 0 16px #ffc107aa;
+  color: #ffc107;
+}
+
+@keyframes aparecerTitulo {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+
+    li a {
+      color: rgb(244, 226, 226);
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: $color-secundario;
+      }
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(45deg, #8e8a2a, #ff6f61, #3498db);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.sub-titulo{
+  margin: 0;
+  animation: aparecerTitulo 2s ease-out;
+  text-shadow: 0 0 8px #ffc107aa , 0 0 16px #ffc107aa;
+  color: #ffc107;
+}
+
+.productos {
+  flex-direction: column;
+  align-items: center;
+
+  h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgb(244, 226, 226);
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: $color-secundario;
+      }
+    
+
+  }
+
+  .producto-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem
+  }
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+
+  .producto {
+    background: rgba(231, 234, 145, 0.679);
+    padding: 1rem;
+    border: 1px solid #f7f7f0;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    h4 {
+      margin: 0.5rem 0;
+    }
+  }
+}
+.btn-comprar{
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0a0a09;
+  text-shadow: 0 0 8px #ffc107aa , 0 0 16px #ffc107aa;
+  color: #ffc107;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+   cursor: pointer;
+   box-shadow: 0 4px 8px rgba(0,0,0.2);
+   transition:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+   &:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+   }
+}
+  
+
+footer {
+  text-align:end left;
+  padding: 1rem;
+  background-color: $color-principal;
+  color: $color-secundario;
+}
+
+
+
+/* 🔁 Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .productos {
+    flex-direction: column;
+    align-items: center;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+.producto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  flex-direction: column;
+    align-items: center;
+
+  }
+  .producto {
+    width: 90%;
+  }
+}
+
+/* ✨ Animaciones */
+a {
+  transition: color 1s ease;
+}
+
+.producto {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}

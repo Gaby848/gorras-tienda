@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Locales | Tienda Urbana</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #f8f9fa;
+    }
+
+    .text-yellow {
+      color: #ffc107;
+    }
+
+    .bg-dark-yellow {
+      background-color: #ffc107;
+      color: #000;
+    }
+
+    .card {
+      background-color: #1f1f1f;
+      border: 1px solid #ffc107;
+    }
+
+    .card-title {
+      color: #ffc107;
+    }
+
+    .card-text {
+      color: #e0e0e0;
+    }
+
+    .mapa {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      border-top: 1px solid #333;
+      animation: aparecerTitulo 2s ease-out;
+      text-shadow: 0 0 8px #ffc107aa , 0 0 16px #ffc107aa;
+      color: #ffc107;
+
+    }
+
+
+    .form-control {
+      background-color: #2c2c2c;
+      color: #fff;
+      border: 1px solid #ffc107;
+    }
+
+    .form-control::placeholder {
+      color: #bbb;
+    }
+
+    .no-result {
+      display: none;
+      text-align: center;
+      color: #ffc107;
+      font-style: italic;
+      margin-top: 2rem;
+    }
+
+    .mapa-general {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+    }
+  </style>
+</head>
+<body>
+    <a href="index.html">pagina principal</a>
+
+  <header class="text-center py-4 bg-black">
+    <h1 class="text-yellow">Nuestras Sucursales</h1>
+    <p class="lead">Filtrá por ciudad o provincia para encontrar tu local más cercano</p>
+  </header>
+
+  <main class="container py-5">
+
+    <!-- Mapa General -->
+    <div class="mb-5">
+      <h3 class="text-yellow">Mapa General de Locales</h3>
+      <iframe class="mapa-general"
+        src="https://www.google.com/maps/d/embed?mid=1APY2F-PgThOQHq68ZzV-8lmmLL1pZT0&hl=es&ehbc=2E312F"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Buscador -->
+    <div class="mb-4">
+      <input type="text" id="buscador" class="form-control" placeholder="Buscar por ciudad, provincia, dirección...">
+    </div>
+
+    <div class="row g-4" id="contenedor-locales">
+
+      <!-- Local 1 -->
+      <div class="col-md-6 col-lg-4 local" data-ciudad="buenos aires microcentro corrientes">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Buenos Aires - Microcentro</h5>
+            <p class="card-text"><i class="bi bi-geo-alt-fill text-yellow"></i> Av. Corrientes 1234, CABA</p>
+            <p class="card-text"><i class="bi bi-clock-fill text-yellow"></i> Lunes a Sábados - 10:00 a 20:00</p>
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.8611176608834!2d-58.38759792427467!3d-34.6101244729515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacedd7f8ebd%3A0x3a1b10bcb1e3e6ef!2sAv.%20Corrientes%201234%2C%20C1043AAZ%20CABA!5e0!3m2!1ses-419!2sar!4v1718149678414!5m2!1ses-419!2sar" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Local 2 -->
+      <div class="col-md-6 col-lg-4 local" data-ciudad="cordoba nueva cordoba san juan">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Córdoba - Nueva Córdoba</h5>
+            <p class="card-text"><i class="bi bi-geo-alt-fill text-yellow"></i> Bv. San Juan 567, Córdoba</p>
+            <p class="card-text"><i class="bi bi-clock-fill text-yellow"></i> Lunes a Viernes - 9:30 a 19:30</p>
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0227034954084!2d-64.19133472440759!3d-31.417551597023867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943297319df946a9%3A0x5b2e7f7c2bfc76f9!2sBv.%20San%20Juan%20567%2C%20X5000ATK%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1718149886431!5m2!1ses-419!2sar" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Local 3 -->
+      <div class="col-md-6 col-lg-4 local" data-ciudad="rosario santa fe cordoba 890 centro">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Rosario - Centro</h5>
+            <p class="card-text"><i class="bi bi-geo-alt-fill text-yellow"></i> Calle Córdoba 890, Rosario, Santa Fe</p>
+            <p class="card-text"><i class="bi bi-clock-fill text-yellow"></i> Todos los días - 11:00 a 21:00</p>
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.076706989332!2d-60.64295502430843!3d-32.94772257181405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b65348a2f928cf%3A0x55643df18a5efbd9!2sC%C3%B3rdoba%20890%2C%20S2000AWB%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1718150001470!5m2!1ses-419!2sar" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="no-result" id="no-result">No se encontraron locales con ese nombre.</div>
+  </main>
+
+  <footer class="text-center text-secondary py-4">
+    <p class="mb-0">&copy; 2025 Tienda Urbana - Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Buscador Script -->
+  <script>
+    const buscador = document.getElementById("buscador");
+    const locales = document.querySelectorAll(".local");
+    const sinResultados = document.getElementById("no-result");
+
+    buscador.addEventListener("input", function () {
+      const valor = this.value.toLowerCase();
+      let hayResultado = false;
+
+      locales.forEach(local => {
+        const ciudad = local.getAttribute("data-ciudad");
+        if (ciudad.includes(valor)) {
+          local.style.display = "block";
+          hayResultado = true;
+        } else {
+          local.style.display = "none";
+        }
+      });
+
+      sinResultados.style.display = hayResultado ? "none" : "block";
+    });
+  </script>
+</body>
+</html>

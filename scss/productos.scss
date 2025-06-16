@@ -1,0 +1,52 @@
+// scss/_productos.scss
+.productos {
+  @include flex-center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+
+  h3 {
+    text-align: center;
+    color: white;
+
+    &:hover {
+      color: $color-secundario;
+    }
+  }
+
+  .producto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .producto {
+    background: rgb(129, 133, 31);
+    border: 1px solid #a3a303;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    h4 {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.btn-comprar {
+  background-color: $color-fondo;
+  color: $color-hover;
+  @include sombra-amarilla;
+}

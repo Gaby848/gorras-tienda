@@ -1,0 +1,48 @@
+// scss/_header.scss
+header {
+  background-color: $color-principal;
+  color: rgba(255, 255, 255, 0.989);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      @include sombra-amarilla;
+      color: $color-hover;
+      animation: aparecerTitulo 2s ease-out;
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+    li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: $color-secundario;
+      }
+    }
+  }
+}
+
+@keyframes aparecerTitulo {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

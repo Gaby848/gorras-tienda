@@ -1,0 +1,12 @@
+// scss/_base.scss
+body {
+  font-family: $fuente;
+  margin: 0;
+  padding: 0;
+  background-color: $color-fondo;
+  color: $color-principal;
+}
+
+a {
+  transition: color 1s ease;
+}

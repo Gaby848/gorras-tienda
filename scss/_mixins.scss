@@ -1,0 +1,11 @@
+// scss/_mixins.scss
+@mixin sombra-amarilla {
+  text-shadow: 0 0 8px #ffc107aa, 0 0 16px #ffc107aa;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
